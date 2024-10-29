@@ -1,0 +1,1432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interior Design</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
+
+    <style>
+        /* Font styling */
+        @font-face {
+            font-family: 'DM Serif Display';
+            src: url('https://fonts.gstatic.com/s/dmserifdisplay/v15/-nFnOHM81r4j6k0gjAW3mujVU2B2G_5x0ujy.woff2') format('woff2');
+        }
+        @font-face {
+            font-family: 'Jost';
+            src: url('https://fonts.gstatic.com/s/jost/v18/92zatBhPNqw73ord4iYl.woff2') format('woff2');
+        }
+
+        .navbar-brand {
+            font-family: 'DM Serif Display', serif;
+            color: #292f36;
+        }
+        .navbar, .navbar-nav .nav-link {
+            font-family: 'Jost', sans-serif;
+            color: #292f36;
+        }
+        .navbar-nav .nav-link {
+            margin-right: 15px;
+            padding: 8px 10px;
+            transition: color 0.3s ease;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #AF6E4D;
+        }
+        .navbar {
+            padding: 25px 80px;
+            font-size: 20px;
+            background-color: white;
+        }
+
+        /* Hero image and overlay styling */
+        .image-container {
+            position: relative;
+            width: 100%;
+            max-width: 1340px;
+        }
+        .image-container img {
+            width: 100%;
+            height: 700px;
+            border-radius: 0px 0px 0px 300px;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 60px;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color: white;
+            padding: 20px;
+            text-align: left;
+            margin-right: 700px;
+            margin-top: 15px;
+        }
+        .overlay h1 {
+            font-family: 'Jost';
+            font-size: 70px;
+            color: #292f36;
+            font-weight:400;
+
+        }
+        .overlay p {
+            font-size: 20px;
+            color: #4d5053;
+            font-family: 'DM Serif Display';
+            margin-left: 5px;
+        }
+        /* Get Started button styling */
+        .get-started {
+            width: 30%;
+            padding: 20px 20px 20px 32px;
+            background-color: #292f36;
+            color: #f4f0ec;
+            margin: 10px 390px 30px 5px;
+            border: 2px solid #292f36;
+            border-radius: 18px;
+            letter-spacing: .04em;
+            background-image: url('img/65bb1bd8cf9330922c3d8afa_button-arrow-gold.svg');
+            background-position: 88%;
+            background-repeat: no-repeat;
+        }
+        .get-started:hover {
+            background-color: #f4f0ec;
+            color: #292f36;
+            border: 2px solid #292f36;
+            text-decoration:none;
+        }
+
+        /* Section titles and links */
+        .container h2 {
+            font-family: 'Jost';
+            font-weight: 700;
+            margin-top: 70px;
+            padding-bottom: 10px;
+            color:#292f36;
+            font-size:30px;
+        }
+        .container p {
+            font-family: 'Jost';
+            padding: 20px 20px 20px 20px;
+            color:#4d5053;
+            font-size:20px;
+        }
+        .view-more-link {
+            font-weight: 500;
+            color: #4d5053;
+            text-decoration: none;
+            background-image: url('img/65bb1bd8cf9330922c3d8afa_button-arrow-gold.svg');
+            background-repeat: no-repeat;
+            padding-right: 80px;
+            background-position: right center;
+            padding: 10px 30px; /* Add padding to the link */
+            border-radius: 8px; /* Rounded corners */
+            transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+            font-size:18px;
+        }
+        
+        .view-more-link:hover {
+            text-decoration: none;
+            color: #cda274; /* Hover text color */
+            padding: 50px 30px; /* Keep padding consistent */
+        }
+        
+        body {
+            font-family: 'Jost', sans-serif;
+        }
+       
+        .left-radius-image {
+            border-radius: 0 330px 0 125px;
+            margin-left:650px;
+            margin-top:50px;
+        }
+        img {
+            vertical-align: middle;
+            max-width: 100%;
+            display: inline-block;
+        }
+        .intro-content-wrap{
+            padding-right: 60px;
+        }
+        .flex-container {
+            display: flex; /* Enable flexbox layout */
+            justify-content: space-between; /* Space between items */
+            align-items: center; /* Align items vertically centered */
+            max-width: 1340px; /* Set a max width */
+            margin: 0 auto; /* Center the container */
+            padding: 20px; /* Optional padding */
+            margin-top:50px;
+           
+        }
+        
+        .text-content {
+            font-family: 'DM Serif Display';
+            max-width: 50%; /* Limit the width of the text */
+            padding: 100px 30px 50px 20px; /* Add padding around the text */
+            margin-bottom:200px;
+            font-size: 20px;
+        }
+        .text-content h1 {
+            font-size: 60px; /* Adjust the size as needed */
+            color: #292f36; /* You can also specify the color if desired */
+            font-weight: 700; /* Font weight set to bold */
+           
+        }
+        .text-content p {
+         
+
+        }
+        
+        .right-aligned-image-container {
+            position: relative;
+            width: 50%; /* Allow the image container to take up half the space */
+            margin-left: auto; /* Align to the right */
+            overflow: hidden; /* Prevent overflow */
+            
+        }
+        
+        .right-aligned-image-container img {
+            width: 100%; /* Responsive image */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 0 330px 0 125px; /* Round corners as needed */
+            display: block; /* Remove space below image */
+        }
+        .estimate-button {
+            display: inline-block;
+            font-family: 'Jost', sans-serif;
+            font-size: 18px;
+            color: #f4f0ec;
+            background-color: #292f36;
+            padding: 12px 30px;
+            border: 2px solid #292f36;
+            border-radius: 8px;
+          
+            letter-spacing: 0.05em;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            background-image: url('img/65bb1bd8cf9330922c3d8afa_button-arrow-gold.svg');
+            background-position: 90% center;
+            background-repeat: no-repeat;
+        }
+        
+        .estimate-button:hover {
+            background-color: #f4f0ec; /* Change background on hover */
+            color: #292f36; /* Change text color on hover */
+            border: 2px solid #292f36;
+            text-decoration: none;
+        }
+    .intro-call-wrap {
+        margin-left: 10px;
+    }
+    img {
+        vertical-align: middle;
+        max-width: 100%;
+        display: inline-block;
+    }
+    .call-link {
+        color: var(--black-background);
+        font-size: 24px;
+        font-weight: 700;
+        transition: color .2s;
+    }  
+    .intro-icon-wrap {
+        background-color: var(--light-background);
+        border-radius: 100px;
+        justify-content: center;
+        align-items: center;
+        width: 93px;
+        min-width: 93px;
+        height: 93px;
+        min-height: 93px;
+        margin-right: 10px;
+        display: flex;
+    }
+ 
+.testimonial-content-wrap {
+    text-align: center;
+    padding: 40px;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+  }
+  
+  .testimonial-grid {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .testimonial-item {
+    background: #f8f8f8;
+    padding: 30px;
+    width: 350px; /* Increased width */
+    border-radius: 10px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .testimonial-image-wrap {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .testimonial-client {
+    width: 100px; /* Increased size */
+    height: 100px;
+    border-radius: 50%;
+  }
+  
+  .client-detail {
+    margin-top: 15px;
+  }
+  
+  .client-name {
+    font-size: 1.5rem; /* Increased font size */
+    font-weight: bold;
+  }
+  
+  .client-location {
+    color: #777;
+    font-size: 1rem;
+  }
+  
+  .testimonial-content {
+    font-size: 1.1rem; /* Slightly larger font */
+    color: #333;
+    margin-top: 15px;
+  }
+
+  
+.client-grid-wrap {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    padding: 20px;
+  }
+  
+  .client-image-wrap img {
+    max-width: 100px;
+    height: auto;
+    filter: grayscale(100%); /* Optional: to give a grayscale effect */
+    transition: filter 0.3s;
+  }
+  
+  .client-image-wrap img:hover {
+    filter: grayscale(0%); /* Remove grayscale on hover */
+  }
+  .section-title-wrap {
+    text-align: center;
+    margin: 50px auto;
+    max-width: 700px;
+    padding: 20px;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .section-title-content {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.6;
+  }
+  
+  .project-listing-details {
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 25px;
+    display: flex;
+}
+.project-title-wrap {
+    font-size: 20px;
+}
+.project-title-link {
+    display: block;
+}
+
+.w-inline-block {
+    max-width: 100%;
+    display: inline-block;
+}
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color .2s;
+}
+a {
+    background-color: rgba(0, 0, 0, 0);
+}
+* {
+    box-sizing: border-box;
+}
+user agent stylesheet
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.project-title {
+    color: var(--secondary-color);
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 25px;
+    transition: color .2s;
+}
+
+h2 {
+    color: var(--secondary-color);
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-family: DM Serif Display, sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+h2 {
+    margin-top: 20px;
+    font-size: 32px;
+    line-height: 36px;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+* {
+    box-sizing: border-box;
+}
+user agent stylesheet
+h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+}
+.project-category-link {
+    color: var(--black-background);
+    transition: color .2s;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color .2s;
+}
+a {
+    background-color: rgba(0, 0, 0, 0);
+}
+* {
+    box-sizing: border-box;
+}
+user agent stylesheet
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.project-single-link {
+    background-color: var(--light-background);
+    border-radius: 100px;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    transition: background-color .2s;
+    display: flex;
+}
+.w-inline-block {
+    max-width: 100%;
+    display: inline-block;
+}
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color .2s;
+}
+a {
+    background-color: rgba(0, 0, 0, 0);
+}
+* {
+    box-sizing: border-box;
+}
+user agent stylesheet
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.w-col-6 {
+    width: 50%;
+}
+.w-col {
+    float: left;
+    width: 100%;
+    min-height: 1px;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+}
+* {
+    box-sizing: border-box;
+}
+user agent stylesheet
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+.counter-item {
+    border-right: 1px solid var(--primary-color);
+    text-align: center;
+    padding-right: 20px;
+    font-family: DM Serif Display, sans-serif;
+}
+* {
+    box-sizing: border-box;
+}
+user agent stylesheet
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+body {
+    color: #4d5053;
+    letter-spacing: .01em;
+    background-image: url(https://cdn.prod.website-files.com/65bb1bd…/65bb1bd…_body-pattern-line.png);
+    background-position: 50%;
+    background-repeat: repeat-y;
+    background-size: auto;
+    font-family: Jost, sans-serif;
+    font-size: 22px;
+    line-height: 1.5;
+}
+body {
+    color: #333;
+    background-color: #fff;
+    min-height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.counter-grid-wrap {
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.w-layout-grid {
+    grid-row-gap: 16px;
+    grid-column-gap: 16px;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-columns: 1fr;
+    display: grid;
+}
+* {
+    box-sizing: border-box;
+}
+user agent stylesheet
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+body {
+    color: #4d5053;
+    letter-spacing: .01em;
+    background-image: url(https://cdn.prod.website-files.com/65bb1bd…/65bb1bd…_body-pattern-line.png);
+    background-position: 50%;
+    background-repeat: repeat-y;
+    background-size: auto;
+    font-family: Jost, sans-serif;
+    font-size: 22px;
+    line-height: 1.5;
+}
+body {
+    color: #333;
+    background-color: #fff;
+    min-height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.counter-item {
+    border-right: 1px solid white;
+    text-align: center;
+    padding-right: 20px;
+    font-family: DM Serif Display, sans-serif;
+}
+* {
+    box-sizing: border-box;
+}
+user agent stylesheet
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+body {
+    color: #4d5053;
+    letter-spacing: .01em;
+    background-image: url(https://cdn.prod.website-files.com/65bb1bd…/65bb1bd…_body-pattern-line.png);
+    background-position: 50%;
+    background-repeat: repeat-y;
+    background-size: auto;
+    font-family: Jost, sans-serif;
+    font-size: 22px;
+    line-height: 1.5;
+}
+body {
+    color: #333;
+    background-color: #fff;
+    min-height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.count-number {
+    color: #cda274;
+    letter-spacing: .03em;
+    font-size: 85px;
+}
+
+h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: DM Serif Display, sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+h3 {
+    margin-top: 20px;
+    font-size: 24px;
+    line-height: 30px;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+* {
+    box-sizing: border-box;
+}
+user agent stylesheet
+h3 {
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+}
+
+.counter-title {
+    font-family: Jost, sans-serif;
+}
+
+.counter-item.counter-last-child {
+    border-right-style: none;
+}
+
+
+.blog-wrap.home-page-blog {
+    padding-top: 60px;
+}
+* {
+    box-sizing: border-box;
+}
+user agent stylesheet
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+body {
+    color: #4d5053;
+    letter-spacing: .01em;
+    background-image: url(https://cdn.prod.website-files.com/65bb1bd…/65bb1bd…_body-pattern-line.png);
+    background-position: 50%;
+    background-repeat: repeat-y;
+    background-size: auto;
+    font-family: Jost, sans-serif;
+    font-size: 22px;
+    line-height: 1.5;
+}
+body {
+    color: #333;
+    background-color: #fff;
+    min-height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.w-container .w-row {
+    margin-left: -10px;
+    margin-right: -10px;
+}
+.blog-wrap {
+    padding: 20px; /* Add some padding around the blog section */
+    background-color: #f9f9f9; /* Optional: Light background color for contrast */
+  }
+  
+  .w-dyn-items {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping to next line */
+    gap: 20px; /* Space between cards */
+    justify-content: space-between; /* Space out the cards evenly */
+  }
+  
+  .blog-collection-item {
+    flex: 1 1 calc(33.33% - 20px); /* Three cards per row with space adjustment */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for card effect */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Ensure content doesn't overflow the card */
+    transition: transform 0.2s; /* Smooth transition for hover effect */
+    background-color: #fff; /* Card background color */
+  }
+  
+  .blog-collection-item:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+  }
+  
+  .blog-image-wrap {
+    position: relative; /* Allows positioning of category link */
+  }
+  
+  .blog-category {
+    position: absolute; /* Positioned on the image */
+    top: 10px; /* Distance from the top */
+    left: 10px; /* Distance from the left */
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+    padding: 5px 10px; /* Padding around the text */
+    border-radius: 5px; /* Rounded corners for category */
+    font-size: 0.9em; /* Smaller font for category */
+  }
+  
+  .blog-title {
+    font-size: 1.5em; /* Title font size */
+    margin: 15px 0; /* Margin around title */
+  }
+  
+  .blog-item-meta {
+    display: flex; /* Flex for date and link alignment */
+    justify-content: space-between; /* Space out date and link */
+    align-items: center; /* Center alignment */
+    padding: 10px 15px; /* Padding for meta */
+    border-top: 1px solid #eee; /* Top border for separation */
+  }
+  
+  .blog-date {
+    font-size: 0.9em; /* Smaller font for date */
+    color: #777; /* Dark gray color for the date */
+  }
+  
+  .blog-single-link img {
+    width: 20px; /* Fixed width for arrow icon */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  /* General Card Styles */
+.blog-item, .counter-item {
+    background: white; /* White background for the card */
+   
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding inside the card */
+    margin: 15px; /* Margin around the card */
+    
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+
+/* Blog Section Specific Styles */
+.blog-image-wrap {
+    overflow: hidden; /* Hide overflow for the image */
+    border-radius: 10px 10px 0 0; /* Rounded corners for the top */
+}
+
+.blog-listing-image {
+    width: 100%; /* Full width for the image */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.category-link {
+    display: inline-block; /* Block display for category link */
+    margin-top: 10px; /* Margin above category link */
+}
+
+/* Counter Section Specific Styles */
+.counter-grid-wrap {
+    display: grid; /* Use grid for layout */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between grid items */
+    text-align: center; /* Center text */
+}
+
+.count-number {
+    font-size: 7em; /* Larger font size for numbers */
+    margin: 0; /* Remove default margin */
+}
+
+.counter-title {
+    color: #666; /* Gray color for titles */
+    padding:30px;
+}
+
+.call-to-action-wrap {
+    background-color: #292f36;
+    text-align: center;
+    border-radius: 70px;
+    padding-top: 85px;
+    padding-bottom: 85px;
+}
+.call-to-action-title {
+    color:white;
+    font-size: 50px;
+}
+.call-to-action-content {
+    color:white ;
+    margin-bottom: 20px;
+    border-radius:50px;
+    margin-top:30px;
+
+}
+.button-colored.call-to-action-button {
+    box-shadow: 1px 0 18px rgba(0, 0, 0, .2);
+    border-radius:30px;
+}
+.button-colored {
+    border: 2px solid #cda274;
+    background-color: #cda274;
+    color: #f4f0ec;
+    background-image: url(https://cdn.prod.website-files.com/65bb1bd…/65bb1bd…_button-arrow-black.svg);
+    background-position: 85%;
+    background-repeat: no-repeat;
+    background-size: auto;
+    border-radius: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    padding: 20px 65px 20px 32px;
+    font-size: 18px;
+    font-weight: 600;
+    transition: background-color .2s, color .2s;
+}
+.w-button {
+    color: #fff;
+    line-height: inherit;
+    cursor: pointer;
+   
+    border: 0;
+    border-radius: 0;
+    padding: 9px 15px;
+    text-decoration: none;
+    display: inline-block;
+}
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color .2s;
+}
+a {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.button-colored.call-to-action-button {
+    box-shadow: 1px 0 18px rgba(0, 0, 0, .2);
+}
+.button-colored:hover {
+    border-color: var(--primary-color);
+    background-color: var(--white);
+    color: var(--secondary-color);
+    text-decoration:none;
+}
+a:hover {
+    color: var(--secondary-color);
+}
+a:active, a:hover {
+    outline: 0;
+}
+.footer-grid-wrap {
+    grid-template-rows: auto;
+    grid-template-columns: 1.4fr .75fr .75fr 1.2fr;
+    padding-bottom: 80px;
+}
+
+.w-layout-grid {
+    grid-row-gap: 16px;
+    grid-column-gap: 16px;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-columns: 1fr;
+    display: grid;
+}
+.footer-widget-wrap {
+    padding-right: 60px;
+}
+
+.w-inline-block {
+    max-width: 100%;
+    display: inline-block;
+}
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color .2s;
+}
+a {
+    background-color: rgba(0, 0, 0, 0);
+}
+.footer-logo {
+    margin-bottom: 15px;
+}
+img {
+    vertical-align: middle;
+    max-width: 100%;
+    display: inline-block;
+}
+img {
+    border: 0;
+}
+* {
+    box-sizing: border-box;
+}
+user agent stylesheet
+img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color .2s;
+}
+user agent stylesheet
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+}
+
+.more-template-badge {
+    z-index: 999;
+    margin-bottom: 10px;
+    position: fixed;
+    top: auto;
+    bottom: 30px;
+    left: auto;
+    right: 0%;
+}
+.w-inline-block {
+    max-width: 100%;
+    display: inline-block;
+}
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color .2s;
+}
+a {
+    background-color: rgba(0, 0, 0, 0);
+}
+* {
+    box-sizing: border-box;
+}
+user agent stylesheet
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+
+
+
+/* Footer General Styles */
+.footer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid layout */
+    gap: 30px; /* Space between grid items */
+    background-color: #f8f8f8; /* Light background color */
+    padding: 40px; /* Padding around the footer */
+    color: #333; /* Dark text color for readability */
+}
+
+/* Logo Wrap Styles */
+.footer-logo-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align logo and intro text */
+}
+
+/* Logo Styles */
+.footer-logo {
+    width: 100%; /* Full width for logo */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Margin below logo */
+}
+
+/* Intro Text Styles */
+.footer-intro-content {
+    text-align: center; /* Center text */
+    font-size: 14px; /* Font size for intro */
+    color: #666; /* Gray color for intro */
+    margin-left:30px;
+}
+
+/* Footer Links Styles */
+.footer-links {
+    margin-top: 20px; /* Margin above sections */
+    margin-left:50px;
+}
+
+/* Footer Widget Title Styles */
+.footer-widget-title {
+    font-size: 30px; /* Font size for titles */
+    margin-bottom: 10px; /* Margin below title */
+    margin-left:60px;
+    color: #444; /* Darker color for title */
+}
+
+/* Footer Menu Links Styles */
+.footer-menu-links-wrap {
+    margin-top: 10px; /* Margin above links */
+}
+
+.footer-link {
+    display: block; /* Block display for links */
+    color: #4d5053; /* Link color */
+    text-decoration: none; /* Remove underline */
+    margin-bottom: 8px; /* Space between links */
+    transition: color 0.3s; /* Transition for color change */
+    padding-top:20px;
+    font-size:15px;
+    margin-left:60px;
+}
+
+.footer-link:hover {
+    color: #cda274; /* Darker shade on hover */
+    text-decoration:none;
+}
+
+/* Footer Contact Styles */
+.footer-contact {
+    margin-top: 20px; /* Margin above contact section */
+}
+
+/* Footer Address Styles */
+.footer-address {
+    margin: 0; /* Remove default margin */
+    font-size: 14px; /* Font size for address */
+    color: #666; /* Gray color for address */
+    margin-left:60px;
+}
+
+/* Footer Bottom Styles */
+.footer-bottom {
+    grid-column: span 4; /* Span all columns */
+    text-align: center; /* Center align text */
+    margin-top: 30px; /* Margin above copyright text */
+    font-size: 12px; /* Smaller font size */
+    color: #999; /* Light gray color */
+}
+
+/* Logo Wrap Styles */
+.footer-logo-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align logo and intro text */
+    margin-top:30px;
+    margin-right:80px;
+}
+
+/* Logo Styles */
+.footer-logo {
+    width: 100%; /* Full width for logo */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Margin below logo */
+    margin-left:20px;
+}
+
+
+.recent-projects {
+    display: flex;
+    flex-wrap: wrap;  /* Allow wrapping to maintain two columns */
+    justify-content: space-between; /* Space between cards */
+    margin: 20px 0; /* Space above and below the project section */
+}
+
+.recent-project-card {
+    width:40%; /* Each card takes half the width minus space for margins */
+    margin-bottom: 20px; /* Space below each card */
+    border: 1px solid #ddd; /* Optional: Border around each card */
+    border-radius: 10px 100px 10px 10px; /* Optional: Rounded corners */
+    overflow: hidden; /* Prevent content overflow */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.project-image {
+    width: 100%; /* Full width for images */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.project-details {
+    padding: 15px; /* Padding inside project details */
+}
+
+.project-title {
+    font-size: 20px; /* Adjust title size */
+    margin: 10px 0; /* Margin above and below title */
+}
+
+.project-category {
+    font-size: 14px; /* Adjust category size */
+    color: #777; /* Color for the category */
+    margin: 5px 0; /* Margin around category */
+}
+
+.project-readmore {
+    display: inline-block; /* Display as block for better layout */
+    padding: 10px 15px; /* Padding for the read more link */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline */
+    border-radius: 4px; /* Rounded corners for button */
+    color: inherit; /* Inherit color from parent */
+    transition: background 0.3s; /* Smooth background transition */
+}
+
+.project-readmore:hover {
+    text-decoration: underline; /* Underline text on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .recent-project-card {
+        width: 100%; /* Stack cards on small screens */
+    }
+}
+
+
+
+
+
+
+
+
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light border-bottom">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="img/65bb1bd8cf9330922c3d8af7_interno.svg" alt="Interno Logo" style="height: 40px;">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#pages">Pages</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="image-container">
+        <img src="img/65bb1bd8cf9330922c3d8b5d_hero-area-image.jpg" alt="Hero Area Image" class="img-fluid"> <!-- Bootstrap class for responsive image -->
+        <div class="overlay">
+            <h1 class="display-4">Let's Create Your Dream Interior</h1>
+            <p class="lead">The world needs innovators and problem solvers who turn challenges into greater opportunities.</p>
+            <a href="#get-started" class="get-started">Get Started</a>
+        </div>
+    </div>
+
+   <!-- Content Section -->
+<div class="container py-5">
+    <div class="row text-center">
+        <div class="col-md-4">
+            <h2 class="section-title">Interior Design</h2>
+            <p class="section-description">Enhancing the interior to achieve a healthier environment for the people using the right space.</p>
+            <a href="#interior-design" class="view-more-link">View More</a>
+        </div>
+        <div class="col-md-4">
+            <h2 class="section-title">Furniture</h2>
+            <p class="section-description">Movable articles that are used to make a room or building suitable for living or working.</p>
+            <a href="#furniture" class="view-more-link">View More</a>
+        </div>
+        <div class="col-md-4">
+            <h2 class="section-title">Flooring</h2>
+            <p class="section-description">Thin object any finished material applied over a floor structure to provide a walking surface.</p>
+            <a href="#flooring" class="view-more-link">View More</a>
+        </div>
+    </div>
+</div>
+
+
+    <div class="flex-container">
+        <div class="text-content">
+            <h1>We Tackle The Most Challenging Designs</h1>
+            <p>The world needs innovators and problem solvers who turn challenges into greater opportunities. We have
+                an insatiable curiosity about transformative trends challenging the status.</p>
+                <div class="intro-icon-wrap"><img src="https://cdn.prod.website-files.com/65bb1bd8cf9330922c3d8aca/65bb1bd8cf9330922c3d8b03_intro-call.svg" loading="lazy" alt="Call Icon"></div>
+                <div class="intro-call-wrap"><a href="tel:012345678" class="call-link">012345678</a><p>Call Us Anytime</p></div>
+                <a href="#get-started" class="estimate-button">Get Free Estimate</a>
+
+        </div>
+        <div class="right-aligned-image-container">
+            <img src="img/65bb1bd8cf9330922c3d8b02_intro-image.jpg" alt="Hero Area Image">
+        </div>
+    </div>
+
+    <div class="testimonial-content-wrap">
+        <h2 class="section-title text-center">What People Think<br> About Interno</h2>
+        <div class="testimonial-grid">
+          <!-- Testimonial 1 -->
+          <div class="testimonial-item">
+            <div class="testimonial-detail">
+              <div class="testimonial-image-wrap">
+                <img src="https://cdn.prod.website-files.com/65bb1bd8cf9330922c3d8aca/65bb1bd8cf9330922c3d8b4f_client-image-1.jpg" 
+                     alt="Testimonial Image" class="testimonial-client">
+                <div class="client-detail">
+                  <h3 class="client-name">Lisa Clairton</h3>
+                  <div class="client-location">New York, USA</div>
+                </div>
+              </div>
+              <p class="testimonial-content">We selected Interno interior because of rigorous design background & education.</p>
+            </div>
+          </div>
+      
+          <!-- Testimonial 2 -->
+          <div class="testimonial-item">
+            <div class="testimonial-detail">
+              <div class="testimonial-image-wrap">
+                <img src="https://cdn.prod.website-files.com/65bb1bd8cf9330922c3d8aca/65bb1bd8cf9330922c3d8b51_client-image-3.jpg" 
+                     alt="Testimonial Image" class="testimonial-client">
+                <div class="client-detail">
+                  <h3 class="client-name">David Knight</h3>
+                  <div class="client-location">Sydney, Australia</div>
+                </div>
+              </div>
+              <p class="testimonial-content">The team exceeded our expectations and emerged as leaders of our project’s.</p>
+            </div>
+          </div>
+      
+          <!-- Testimonial 3 -->
+          <div class="testimonial-item">
+            <div class="testimonial-detail">
+              <div class="testimonial-image-wrap">
+                <img src="https://cdn.prod.website-files.com/65bb1bd8cf9330922c3d8aca/65bb1bd8cf9330922c3d8b50_client-image-2.jpg" 
+                     alt="Testimonial Image" class="testimonial-client">
+                <div class="client-detail">
+                  <h3 class="client-name">Lisa Clairton</h3>
+                  <div class="client-location">Paris, France</div>
+                </div>
+              </div>
+              <p class="testimonial-content">They balanced the architectural vision and the project realities beautifully.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="client-grid-wrap">
+        <div class="client-image-wrap">
+          <img src="https://cdn.prod.website-files.com/65bb1bd8cf9330922c3d8aca/65bb1bd8cf9330922c3d8b14_client-logo-1.svg" alt="Client Logo 1">
+        </div>
+        <div class="client-image-wrap">
+          <img src="https://cdn.prod.website-files.com/65bb1bd8cf9330922c3d8aca/65bb1bd8cf9330922c3d8b16_client-logo-2.svg" alt="Client Logo 2">
+        </div>
+        <div class="client-image-wrap">
+          <img src="https://cdn.prod.website-files.com/65bb1bd8cf9330922c3d8aca/65bb1bd8cf9330922c3d8b12_client-logo-3.svg" alt="Client Logo 3">
+        </div>
+        <div class="client-image-wrap">
+          <img src="https://cdn.prod.website-files.com/65bb1bd8cf9330922c3d8aca/65bb1bd8cf9330922c3d8b15_client-logo-4.svg" alt="Client Logo 4">
+        </div>
+        <div class="client-image-wrap">
+          <img src="https://cdn.prod.website-files.com/65bb1bd8cf9330922c3d8aca/65bb1bd8cf9330922c3d8b13_client-logo-5.svg" alt="Client Logo 5">
+        </div>
+      </div>
+
+      <div class="section-title-wrap">
+        <h2 class="section-title">Recent Projects</h2>
+        <p class="section-title-content">
+            With tools to make every part of your process more human and a support team
+            <br>excited to help you, getting started with us has never been easier.
+        </p>
+    </div>
+    <div class="project-items recent-projects">
+        <div class="w-dyn-list">
+            <div role="list" class="w-dyn-items w-row">
+                <div role="listitem" class="w-dyn-item w-col w-col-6">
+                    <div class="recent-project-card">
+                        <a href="/project/winery-dry-creek-building" class="project-link">
+                            <img src="https://cdn.prod.website-files.com/65bb1bd8cf9330922c3d8aec/65bb1bd8cf9330922c3d8b8e_project-image-1.jpg" loading="lazy" alt="Winery Dry Creek Building" class="project-image">
+                        </a>
+                        <div class="project-details">
+                            <h2 class="project-title">Winery Dry Creek Building</h2>
+                            <p class="project-category">Art Modern</p>
+                            <a href="/project/winery-dry-creek-building" class="project-readmore"></a>
+                        </div>
+                    </div>
+                </div>
+                <div role="listitem" class="w-dyn-item w-col w-col-6">
+                    <div class="recent-project-card">
+                        <a href="/project/creative-workplace-design" class="project-link">
+                            <img src="https://cdn.prod.website-files.com/65bb1bd8cf9330922c3d8aec/65bb1bd8cf9330922c3d8b8f_project-image-2.jpg" loading="lazy" alt="Creative Workplace Design" class="project-image">
+                        </a>
+                        <div class="project-details">
+                            <h2 class="project-title">Creative Workplace Design</h2>
+                            <p class="project-category">Minimalist</p>
+                            <a href="/project/creative-workplace-design" class="project-readmore"></a>
+                        </div>
+                    </div>
+                </div>
+                <div role="listitem" class="w-dyn-item w-col w-col-6">
+                    <div class="recent-project-card">
+                        <a href="/project/bedroom-interior-pot-work" class="project-link">
+                            <img src="https://cdn.prod.website-files.com/65bb1bd8cf9330922c3d8aec/65bb1bd8cf9330922c3d8b90_project-image-3.jpg" loading="lazy" alt="Bedroom Interior Pot Work" class="project-image">
+                        </a>
+                        <div class="project-details">
+                            <h2 class="project-title">Bedroom Interior Pot Work</h2>
+                            <p class="project-category">Modern</p>
+                            <a href="/project/bedroom-interior-pot-work" class="project-readmore"></a>
+                        </div>
+                    </div>
+                </div>
+                <div role="listitem" class="w-dyn-item w-col w-col-6">
+                    <div class="recent-project-card">
+                        <a href="/project/light-ambience-sepia-design" class="project-link">
+                            <img src="https://cdn.prod.website-files.com/65bb1bd8cf9330922c3d8aec/65bb1bd8cf9330922c3d8b91_project-image-4.jpg" loading="lazy" alt="Light Ambience Sepia Design" class="project-image">
+                        </a>
+                        <div class="project-details">
+                            <h2 class="project-title">Light Ambience Sepia Design</h2>
+                            <p class="project-category">Scandinavian</p>
+                            <a href="/project/light-ambience-sepia-design" class="project-readmore"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+      <div class="w-layout-grid counter-grid-wrap">
+        <div class="counter-item">
+            <h3 class="count-number">12</h3>
+            <p class="counter-title">Years Of Experience</p>
+        </div>
+        <div class="counter-item">
+            <h3 class="count-number">5K</h3>
+            <p class="counter-title">Success Projects</p>
+        </div>
+        <div class="counter-item">
+            <h3 class="count-number">1K</h3>
+            <p class="counter-title">Active Projects</p>
+        </div>
+        <div class="counter-item counter-last-child">
+            <h3 class="count-number">4K</h3>
+            <p class="counter-title">Happy Customers</p>
+        </div>
+    </div>
+      
+
+      <div class="section-title-wrap"><h2 class="section-title center-small-space">Recent Blogs</h2><p class="section-title-content">Get updates about our latest trends and techniques used in <br>interior design project works.</p></div>
+       <div class="blog-wrap home-page-blog"><div class="w-dyn-list"><div role="list" class="w-dyn-items w-row"><div role="listitem" class="blog-collection-item w-dyn-item w-col w-col-4"><div data-w-id="b453cea5-4602-492e-48f6-a27248f1a32d" class="blog-item"><div class="blog-image-wrap"><a href="/post/residential-interior-designer-in-new-york-usa" class="blog-image-link w-inline-block"><img src="https://cdn.prod.website-files.com/65bb1bd8cf9330922c3d8aec/65bb1bd8cf9330922c3d8aee_blog-image-small-1.jpg" loading="lazy" alt="Blog Image" class="blog-listing-image"></a><a href="/category/kitchen-design" class="category-link blog-category w-inline-block"><div class="blog-category">Kitchen Design</div></a></div><a href="/post/residential-interior-designer-in-new-york-usa" class="w-inline-block"><h2 class="blog-title">Residential Interior Designer In New York, USA</h2></a><div class="blog-item-meta"><p class="blog-date">November 23, 2021</p><a style="background-color: rgb(244, 240, 236);" href="/post/residential-interior-designer-in-new-york-usa" class="blog-single-link w-inline-block"><img src="https://cdn.prod.website-files.com/65bb1bd8cf9330922c3d8aca/65bb1bd8cf9330922c3d8b32_link-arrow-right.svg" loading="lazy" alt="Readmore Arrow"></a></div></div></div><div role="listitem" class="blog-collection-item w-dyn-item w-col w-col-4"><div data-w-id="b453cea5-4602-492e-48f6-a27248f1a32d" class="blog-item"><div class="blog-image-wrap"><a href="/post/how-to-choose-the-best-wall-art-decor-house" class="blog-image-link w-inline-block"><img src="https://cdn.prod.website-files.com/65bb1bd8cf9330922c3d8aec/65bb1bd8cf9330922c3d8af0_blog-image-small-2.jpg" loading="lazy" alt="Blog Image" class="blog-listing-image"></a><a href="/category/living-room" class="category-link blog-category w-inline-block"><div class="blog-category">Living Room</div></a></div><a href="/post/how-to-choose-the-best-wall-art-decor-house" class="w-inline-block"><h2 class="blog-title">How To Choose The Best Wall Art &amp; Decor House?</h2></a><div class="blog-item-meta"><p class="blog-date">November 23, 2021</p><a style="background-color: rgb(244, 240, 236);" href="/post/how-to-choose-the-best-wall-art-decor-house" class="blog-single-link w-inline-block"><img src="https://cdn.prod.website-files.com/65bb1bd8cf9330922c3d8aca/65bb1bd8cf9330922c3d8b32_link-arrow-right.svg" loading="lazy" alt="Readmore Arrow"></a></div></div></div><div role="listitem" class="blog-collection-item w-dyn-item w-col w-col-4"><div data-w-id="b453cea5-4602-492e-48f6-a27248f1a32d" class="blog-item"><div class="blog-image-wrap"><a href="/post/tips-to-increase-the-interior-value-of-your-house" class="blog-image-link w-inline-block"><img src="https://cdn.prod.website-files.com/65bb1bd8cf9330922c3d8aec/65bb1bd8cf9330922c3d8b0e_blog-image-small-3.jpg" loading="lazy" alt="Blog Image" class="blog-listing-image"></a><a href="/category/minimalist-interior" class="category-link blog-category w-inline-block"><div class="blog-category">Minimalist Interior</div></a></div><a href="/post/tips-to-increase-the-interior-value-of-your-house" class="w-inline-block"><h2 class="blog-title">Tips To Increase The Interior Value Of Your House</h2></a><div class="blog-item-meta"><p class="blog-date">November 23, 2021</p><a style="background-color: rgb(244, 240, 236);" href="/post/tips-to-increase-the-interior-value-of-your-house" class="blog-single-link w-inline-block"><img src="https://cdn.prod.website-files.com/65bb1bd8cf9330922c3d8aca/65bb1bd8cf9330922c3d8b32_link-arrow-right.svg" loading="lazy" alt="Readmore Arrow"></a></div></div></div><div role="listitem" class="blog-collection-item w-dyn-item w-col w-col-4"><div data-w-id="b453cea5-4602-492e-48f6-a27248f1a32d" class="blog-item"><div class="blog-image-wrap"><a href="/post/best-solution-for-any-office-business-interior" class="blog-image-link w-inline-block"><img src="https://cdn.prod.website-files.com/65bb1bd8cf9330922c3d8aec/65bb1bd8cf9330922c3d8b44_blog-image-small-4.jpg" loading="lazy" alt="Blog Image" class="blog-listing-image"></a><a href="/category/kitchen-design" class="category-link blog-category w-inline-block"><div class="blog-category">Kitchen Design</div></a></div><a href="/post/best-solution-for-any-office-business-interior" class="w-inline-block"><h2 class="blog-title">Best Solution For Any Office &amp; Business Interior</h2></a><div class="blog-item-meta"><p class="blog-date">November 23, 2021</p><a style="background-color: rgb(244, 240, 236);" href="/post/best-solution-for-any-office-business-interior" class="blog-single-link w-inline-block"><img src="https://cdn.prod.website-files.com/65bb1bd8cf9330922c3d8aca/65bb1bd8cf9330922c3d8b32_link-arrow-right.svg" loading="lazy" alt="Readmore Arrow"></a></div></div></div><div role="listitem" class="blog-collection-item w-dyn-item w-col w-col-4"><div data-w-id="b453cea5-4602-492e-48f6-a27248f1a32d" class="blog-item"><div class="blog-image-wrap"><a href="/post/get-solution-for-building-construction-work-" class="blog-image-link w-inline-block"><img src="https://cdn.prod.website-files.com/65bb1bd8cf9330922c3d8aec/65bb1bd8cf9330922c3d8b77_blog-image-small-5.jpg" loading="lazy" alt="Blog Image" class="blog-listing-image"></a><a href="/category/living-room" class="category-link blog-category w-inline-block"><div class="blog-category">Living Room</div></a></div><a href="/post/get-solution-for-building-construction-work-" class="w-inline-block"><h2 class="blog-title">Get Solution For Building Construction Work </h2></a><div class="blog-item-meta"><p class="blog-date">November 23, 2021</p><a style="background-color: rgb(244, 240, 236);" href="/post/get-solution-for-building-construction-work-" class="blog-single-link w-inline-block"><img src="https://cdn.prod.website-files.com/65bb1bd8cf9330922c3d8aca/65bb1bd8cf9330922c3d8b32_link-arrow-right.svg" loading="lazy" alt="Readmore Arrow"></a></div></div></div><div role="listitem" class="blog-collection-item w-dyn-item w-col w-col-4"><div data-w-id="b453cea5-4602-492e-48f6-a27248f1a32d" class="blog-item"><div class="blog-image-wrap"><a href="/post/attain-the-best-finish-for-the-kitchen-cabinets" class="blog-image-link w-inline-block"><img src="https://cdn.prod.website-files.com/65bb1bd8cf9330922c3d8aec/65bb1bd8cf9330922c3d8b86_blog-image-small-6.jpg" loading="lazy" alt="Blog Image" class="blog-listing-image"></a><a href="/category/minimalist-interior" class="category-link blog-category w-inline-block"><div class="blog-category">Minimalist Interior</div></a></div><a href="/post/attain-the-best-finish-for-the-kitchen-cabinets" class="w-inline-block"><h2 class="blog-title">Attain The Best Finish For The Kitchen Cabinets</h2></a><div class="blog-item-meta"><p class="blog-date">November 23, 2021</p><a style="background-color: rgb(244, 240, 236);" href="/post/attain-the-best-finish-for-the-kitchen-cabinets" class="blog-single-link w-inline-block"><img src="https://cdn.prod.website-files.com/65bb1bd8cf9330922c3d8aca/65bb1bd8cf9330922c3d8b32_link-arrow-right.svg" loading="lazy" alt="Readmore Arrow"></a></div></div></div></div></div></div>
+    
+       <div class="call-to-action-wrap"><h2 class="call-to-action-title">Wanna join the interno?</h2><p class="call-to-action-content">Contact Us &amp; Get a Free Consultation</p><a href="/contact-us" class="button-colored call-to-action-button w-button">Connect With us</a></div>
+     
+       <div class="footer">
+        <div class="footer-logo-wrap">
+            <a href="/" aria-current="page" class="footer-logo-link">
+                <img src="https://cdn.prod.website-files.com/65bb1bd8cf9330922c3d8aca/65bb1bd8cf9330922c3d8af7_interno.svg" loading="lazy" alt="Interno Logo" class="footer-logo">
+            </a>
+            <p class="footer-intro-content">We are the leading architect and interior design firm in the world.</p>
+            
+            <!-- Social Media Links -->
+            <div class="footer-social-wrap">
+                <a href="https://www.facebook.com/" target="_blank" class="footer-social-link">
+                    <img src="https://cdn.prod.website-files.com/65bb1bd8cf9330922c3d8aca/65bb1bd8cf9330922c3d8afc_facebook-icon.svg" loading="lazy" alt="Facebook Icon">
+                </a>
+                <a href="https://x.com/" target="_blank" class="footer-social-link">
+                    <img src="https://cdn.prod.website-files.com/65bb1bd8cf9330922c3d8aca/6666deb4e46ad1586b254ae4_twitter-icon.svg" loading="lazy" alt="Twitter Icon">
+                </a>
+                <a href="https://www.linkedin.com" target="_blank" class="footer-social-link">
+                    <img src="https://cdn.prod.website-files.com/65bb1bd8cf9330922c3d8aca/65bb1bd8cf9330922c3d8afd_linkedin-icon.svg" loading="lazy" alt="LinkedIn Icon">
+                </a>
+                <a href="https://www.instagram.com" target="_blank" class="footer-social-link">
+                    <img src="https://cdn.prod.website-files.com/65bb1bd8cf9330922c3d8aca/65bb1bd8cf9330922c3d8afe_instagram-icon.svg" loading="lazy" alt="Instagram Icon">
+                </a>
+            </div>
+        </div>
+        <div class="footer-links">
+            <h2 class="footer-widget-title">Pages</h2>
+            <div class="footer-menu-links-wrap">
+                <a href="/style-guide" class="footer-link">Style Guide</a>
+                <a href="https://interno-template.webflow.io/401" class="footer-link">Protected</a>
+                <a href="/licenses" class="footer-link">Licenses</a>
+                <a href="/changelog" class="footer-link">Changelog</a>
+                <a href="https://interno-template.webflow.io/404" class="footer-link">404</a>
+            </div>
+        </div>
+    
+        <div class="footer-links">
+            <h2 class="footer-widget-title">Explore</h2>
+            <div class="footer-menu-links-wrap">
+                <a href="/about-us" class="footer-link">About Us</a>
+                <a href="/blog" class="footer-link">Recent Blog</a>
+                <a href="/pricing-plan" class="footer-link">Pricing Plan</a>
+                <a href="/our-projects" class="footer-link">Our Projects</a>
+                <a href="/contact-us" class="footer-link">Contact Us</a>
+            </div>
+        </div>
+    
+        <div class="footer-contact">
+            <h2 class="footer-widget-title">Contact</h2>
+            <div class="footer-address-wrap">
+                <p class="footer-address">53, East Birchwood Ave. Brooklyn, New York 11201, USA.</p>
+                <a href="mailto:contact@interno.com" class="footer-link">contact@interno.com</a>
+                <a href="tel:(123)456-7890" class="footer-link">(123) 456 - 7890</a>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <p>Copyright © Interno | Designed by Victorflow Templates - Powered by Webflow</p>
+        </div>
+    </div>
+    
+     
+       <!-- Bootstrap and JS scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
